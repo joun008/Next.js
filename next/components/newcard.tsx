@@ -8,8 +8,12 @@ export default function Newcard(props: ICard["typeCard"]) {
     const { value } = e.target;
     const onlyNumber = value.replace(/[^0-9]/g, "");
     Setdata(onlyNumber);
-    result.set(props.props.id, onlyNumber);
+    result.set(props.props.id, {
+      productId: props.props.id,
+      count: Number(onlyNumber),
+    });
     console.log(result);
+    console.log(Object.fromEntries(result));
   };
   return (
     <div className="flex max-w-md w-full border-b-2">

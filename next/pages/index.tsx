@@ -9,12 +9,8 @@ export interface ICard {
   key: number;
 }
 export default function Index() {
-  const [data, Setdata] = useState(0);
   const { data: product, isLoading } = useProduct();
-  const onChange = (e: any) => {
-    console.log(e);
-    Setdata(e.target.value);
-  };
+
   return (
     <>
       {!isLoading && product !== undefined ? (

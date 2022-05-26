@@ -2,6 +2,7 @@ import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
 import axios from "axios";
 import { QueryClient, QueryClientProvider } from "react-query";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
   return (

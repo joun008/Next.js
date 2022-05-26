@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Notheader from "../components/notheader";
 import DaumPostcode from "react-daum-postcode";
+import { result } from "../components/header";
 
 export default function Order() {
+  const productJson = Object.fromEntries(result);
+  console.log(productJson);
   const [reservation, setReservation] = useState("");
   const [user, setUser] = useState({
     name: "",
